@@ -12,7 +12,6 @@ Run `docker build --force-rm=true --build-arg CERT_PASSWORD=<PASSWORD> --tag=<IM
 
 ## Optimize for caching
 
-Order Rules
 1. Place static instructions higher in the order. Instructions like, but not limited to, EXPOSE, VOLUME, CMD, ENTRYPOINT, and WORDIR whose value is not going to change once it is set.
 2. Place dynamic instruction lower in the order. Instructions like ENV (when using variable substitution), ARG, and ADD
 3. Place dependency RUN instructions before ADD or COPY instructions
